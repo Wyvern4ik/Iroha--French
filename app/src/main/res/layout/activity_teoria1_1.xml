@@ -1,0 +1,343 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF"
+    android:padding="16dp">
+
+    <!-- Верхняя панель -->
+    <LinearLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp">
+
+        <!-- Кнопка "Назад" -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/otmena"
+            android:contentDescription="@string/back_button"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Полоса прогресса -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_weight="1"
+            android:progress="1"
+            android:max="100"
+            android:progressTint="#007BFF" />
+    </LinearLayout>
+
+    <!-- ViewFlipper для этапов -->
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_panel"
+        android:layout_above="@+id/next_button">
+
+        <!-- Шаг 1 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Текст приветствия -->
+            <TextView
+                android:id="@+id/greeting_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:text="Bonjour! [бонджур] — Здравствуйте!"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"/>
+
+            <!-- Описание -->
+            <TextView
+                android:id="@+id/description_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/greeting_text1"
+                android:layout_marginTop="8dp"
+                android:text="Это универсальное приветствие, которое используют во Франции при встрече утром и днем."
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка прослушивания -->
+            <Button
+                android:id="@+id/play_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description_text1"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="▶ Прослушать"
+                android:textSize="16sp"
+                android:backgroundTint="#007BFF"
+                android:textColor="#FFFFFF" />
+
+            <!-- Иконка солнца -->
+            <ImageView
+                android:id="@+id/sun_icon"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/play_button_1"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/solnce"
+                android:contentDescription="Иконка солнца" />
+        </RelativeLayout>
+
+        <!-- Шаг 2 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Текст приветствия -->
+            <TextView
+                android:id="@+id/greeting_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Salut! [салю] — Привет!"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Описание -->
+            <TextView
+                android:id="@+id/description_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/greeting_text2"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Это неформальное приветствие, которое используется среди друзей, членов семьи и в других неофициальных ситуациях."
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <!-- Кнопка прослушивания android:justificationMode="inter_word"-->
+            <Button
+                android:id="@+id/play_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description_text2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#007BFF"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="▶ Прослушать"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <!-- Иконка рукопожатия -->
+            <ImageView
+                android:id="@+id/handshake_icon"
+                android:layout_width="264dp"
+                android:layout_height="64dp"
+                android:layout_below="@+id/play_button_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Иконка рукопожатия"
+                android:src="@drawable/rukopah" />
+        </RelativeLayout>
+
+        <!-- Шаг 3 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Текст приветствия -->
+            <TextView
+                android:id="@+id/greeting_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:text="Au revoir! [о ревуар] — До свидания!"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"/>
+
+            <!-- Описание -->
+            <TextView
+                android:id="@+id/description_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/greeting_text3"
+                android:layout_marginTop="8dp"
+                android:text="Это стандартное прощание, которое вы можете использовать в любой ситуации."
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка прослушивания -->
+            <Button
+                android:id="@+id/play_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_text3"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="▶ Прослушать"
+                android:textSize="16sp"
+                android:backgroundTint="#007BFF"
+                android:textColor="#FFFFFF" />
+
+            <!-- Иконка прощания -->
+            <ImageView
+                android:id="@+id/wave_icon"
+                android:layout_width="264dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/play_button_3"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/godbay"
+                android:contentDescription="Иконка прощания" />
+        </RelativeLayout>
+
+        <!-- Шаг 4 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Текст приветствия -->
+            <TextView
+                android:id="@+id/greeting_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:text="Bonne journée! [бон журнэ] — Хорошего дня!"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Описание -->
+            <TextView
+                android:id="@+id/description_text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/greeting_text4"
+                android:layout_marginTop="8dp"
+                android:text="Это прощание с пожеланием, которое подходит для использования днем."
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка прослушивания -->
+            <Button
+                android:id="@+id/play_button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_text4"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="▶ Прослушать"
+                android:textSize="16sp"
+                android:backgroundTint="#007BFF"
+                android:textColor="#FFFFFF" />
+
+            <!-- Иконка солнца и улыбающегося лица -->
+            <ImageView
+                android:id="@+id/sun_icon4"
+                android:layout_width="264dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/play_button_4"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/utro"
+                android:contentDescription="Иконка солнца и улыбки" />
+        </RelativeLayout>
+        <!-- Шаг 5 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Текст приветствия -->
+            <TextView
+                android:id="@+id/greeting_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:text="À bientôt! [а бьенто] — До скорого!"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Описание -->
+            <TextView
+                android:id="@+id/description_text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/greeting_text5"
+                android:layout_marginTop="8dp"
+                android:text="Это фраза, которой можно попрощаться с людьми, если вы скоро увидитесь снова."
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка прослушивания -->
+            <Button
+                android:id="@+id/play_button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_text5"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="▶ Прослушать"
+                android:textSize="16sp"
+                android:backgroundTint="#007BFF"
+                android:textColor="#FFFFFF" />
+
+            <!-- Иконка часов или календаря -->
+            <ImageView
+                android:id="@+id/time_icon"
+                android:layout_width="264dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/play_button_5"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/time"
+                android:contentDescription="Иконка часов или календаря" />
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <!-- Кнопка "Далее" -->
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Продолжить"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#007BFF"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

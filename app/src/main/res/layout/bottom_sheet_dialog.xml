@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="26dp">
+
+    <!-- Текст результата -->
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Правильно!"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="10dp" />
+    <!-- Текст пояснения -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ответ:"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp" />
+    <!-- Текст пояснения -->
+    <TextView
+        android:id="@+id/explanation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Текст пояснения"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Кнопка "Следующий вопрос" -->
+    <Button
+        android:id="@+id/next_question_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Следующий вопрос"
+        android:backgroundTint="#007BFF"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</LinearLayout>

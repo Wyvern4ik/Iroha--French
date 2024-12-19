@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_background_linear"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вопросы и ответы"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <!-- Описание -->
+    <TextView
+        android:id="@+id/bottom_sheet_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Научись задавать вопросы и отвечать на них во французском языке, используя основные вопросительные слова и фразы для общения в разных ситуациях."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:paddingBottom="16dp"
+        android:layout_marginLeft="5dp"/>
+
+    <!-- Кнопка 1 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bottom_sheet_button_skills"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Начать урок"
+        android:background="@drawable/bottom_sheet_background"
+        android:textColor="#000000"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"/>
+    <!-- Кнопка 1 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="invisible"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

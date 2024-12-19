@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Анимация или изображение -->
+    <ImageView
+        android:id="@+id/completion_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/bashna"
+        android:contentDescription="@string/complete_the_sentence"
+        android:layout_gravity="center"/>
+
+    <!-- Сообщение "Урок пройден!" -->
+    <TextView
+        android:id="@+id/completion_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Урок пройден!"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        />
+    <!--android:fontFamily="@font/sans_serif"-->
+    <!-- Звёзды -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:padding="17dp"
+        android:background="@drawable/rounded_background_w">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:text="Звёзды"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/stars_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/imageView"
+            android:text="+10"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/complete_the_sentence"
+            android:src="@drawable/star" />
+    </RelativeLayout>
+
+    <!-- Оценка (прогресс в процентах) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="17dp"
+        android:background="@drawable/rounded_background_w">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:text="Оценка"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/score_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/imageView2"
+            android:text="0 %"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/complete_the_sentence"
+            android:src="@drawable/progress" />
+    </RelativeLayout>
+
+    <!-- Контейнер для кнопок -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="150dp">
+
+        <!-- Кнопка "Завершить" -->
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:padding="12dp"
+            android:text="Продолжить"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+        <!-- Кнопка "Повторить" -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/retry_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/finish_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:padding="12dp"
+            android:text="Повторить урок"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"
+            style="@style/RoundedButton"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logojapan"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logojapan"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Chozabredtttttttto"
+        tools:targetApi="31">
+        <activity
+            android:name=".urok1_4.teoria1_4"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_4.EndActivity1_4"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_4.test1_4"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_3.teoria1_3"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_3.EndActivity1_3"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_3.test1_3"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_2.teoria1_2"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_2.EndActivity1_2"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_2.test1_2"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_1.teoria1_1"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_1.EndActivity1_1"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_1.test1_1"
+            android:exported="false" />
+        <activity
+            android:name=".urok1_1.ocno0"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_login"
+            android:exported="false"
+            android:label="Вход" />
+        <activity
+            android:name=".activity_register"
+            android:exported="false"
+            android:label="регистрация" />
+        <activity
+            android:name=".VoprosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

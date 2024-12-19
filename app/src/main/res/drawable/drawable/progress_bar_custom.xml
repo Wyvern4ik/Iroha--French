@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Фон ProgressBar -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="7dp" /> <!-- Скругленные углы -->
+            <solid android:color="#E0E0E0" /> <!-- Цвет фона -->
+        </shape>
+    </item>
+
+    <!-- Полоса прогресса -->
+    <item>
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="7dp" /> <!-- Скругленные углы для прогресса -->
+                <solid android:color="#0ebe75" /> <!-- Цвет прогресса -->
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

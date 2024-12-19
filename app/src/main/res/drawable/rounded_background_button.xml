@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Белый фон -->
+    <solid android:color="#FFFFFF" />
+    <!-- Окантовка -->
+    <stroke
+        android:width="3dp"
+        android:color="#DAE1EBFF" /> <!-- Цвет границы -->
+    <!-- Закруглённые углы -->
+    <corners android:radius="50dp" />
+</shape>

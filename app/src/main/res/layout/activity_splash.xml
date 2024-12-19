@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:background="@color/orang">
+    <TextView
+        android:id="@+id/loading_text"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="390dp"
+        android:text="Iroha"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+    <!-- Логотип приложения -->
+    <ImageView
+        android:id="@+id/smslogo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/smslogowhite" />
+    <com.example.chozabredtttttttto.CircularDotsView
+        android:id="@+id/circular_dots_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"/>
+    <!-- Анимированный ProgressBar (точки вращения) -->
+    <!--<ProgressBar
+        android:id="@+id/progress_loader"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:indeterminate="true" /> -->
+
+    <!-- Текст загрузки -->
+    <!--<TextView
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_loader"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Загрузка..."
+        android:textSize="18sp"
+        android:textColor="@color/white" />-->
+</RelativeLayout>
+    <!--android:layout_below="@id/logo"-->

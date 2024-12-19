@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Iroha: Изучение французского языка</string>
+    <string name="bonjour">Bonjour</string>
+    <string name="au_revoir">Au revoir</string>
+    <string name="hello_translation">Здравствуйте</string>
+    <string name="goodbye_translation">До свидания</string>
+    <string name="back_button">Назад</string>
+    <string name="complete_the_sentence">Закончите предложение.</string>
+</resources>
